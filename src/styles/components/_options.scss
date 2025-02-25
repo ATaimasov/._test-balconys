@@ -1,0 +1,81 @@
+@use "../global" as *;
+@use "./options-card";
+@use "./form";
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(45px);
+  }
+}
+
+.options__title {
+  font-family: "Museo Cyrl", sans-serif;
+  font-size: rem(38px);
+  font-weight: 700;
+  line-height: 1em;
+  color: $color-text-primary;
+}
+
+.options__text {
+  padding: 0 rem(35px);
+  font-family: "Open Sans", sans-serif;
+  font-size: rem(16px);
+  line-height: 1.3em;
+  color: $color-text-primary;
+}
+
+.options__cards {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(15px);
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(10px);
+
+
+    & > *:nth-child(3),
+    & > *:nth-child(4),
+    & > *:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    & > *:nth-child(8):last-child {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(5px);
+
+    & > * {
+      grid-column: span 2;
+    }
+
+    & > *:nth-child(4),
+    & > *:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    & > *:nth-child(3):last-child,
+    & > *:nth-child(9):last-child {
+      grid-column: span 6;
+    }
+
+
+  }
+}

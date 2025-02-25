@@ -15,6 +15,7 @@
 .html {
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
+  font-size: $font-size * 0.7;
   line-height: 1.2em;
   color: $color-text-primary;
   scrollbar-color: hex-to-rgba($color-primary, 0.9)
@@ -25,6 +26,14 @@
   /* exception for non smooth scrolling settings */
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    font-size: $font-size * 0.9;
+  }
+
+  @media  screen and (min-width: $screen-xl) {
+    font-size: $font-size;
   }
 }
 
@@ -94,7 +103,7 @@
     align-items: center;
 
     // change it by your needs
-    max-width: 80%;
+    // max-width: 80%;
     row-gap: rem(50px);
     padding: rem(30px);
   }
@@ -103,6 +112,7 @@
 .img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .logo {
@@ -119,6 +129,7 @@
 .btn {
   user-select: none;
   cursor: pointer;
+  text-decoration: none;
   @include event-opacity;
 }
 

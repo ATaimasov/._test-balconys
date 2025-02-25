@@ -1,61 +1,58 @@
 @use "../global" as *;
+@use "./hero-card";
 
 .hero {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 24px;
+  width: 100%;
+}
 
-    @media screen and (min-width: $screen-md) {
-      row-gap: 26px;
-    }
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: rem(20px);
 
-    @media screen and (min-width: $screen-xl) {
-      row-gap: 33px;
-    }
+  @media screen and (min-width: $screen-md) {
+    row-gap: rem(35px);
   }
 
-  &__title {
-    font-family: "Museo Cyrl", sans-serif;
-    font-size: 38px;
-    line-height: 60px;
-    color: $color-title;
-  }
-
-  &__cards {
-    display: grid;
-    justify-items: center;
-    align-items: stretch;
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 32px;
-
-    @media screen and (min-width: $screen-md) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 37px 28px;
-
-      & *:last-child:nth-child(odd) {
-        grid-column: span 2;
-      }
-    }
-
-    @media screen and (min-width: $screen-xl) {
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 24px;
-
-      & *:last-child:nth-child(odd) {
-        grid-column: auto;
-      }
-    }
+  @media screen and (min-width: $screen-xl) {
+    row-gap: rem(70px);
   }
 }
 
-.hero-card {
+.hero__title {
+  font-family: "Museo Cyrl", sans-serif;
+  font-size: rem(38px);
+  line-height: 1em;
+  font-weight: 700;
+  color: $color-text-primary;
+}
+
+.hero__cards {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  height: 100%;
-  min-height: 570px;
-  max-width: 370px;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: rem(32px);
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(37px) rem(28px);
+
+    & *:last-child:nth-child(odd) {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(30px);
+
+    & *:last-child:nth-child(odd) {
+      grid-column: auto;
+    }
+  }
 }
+
