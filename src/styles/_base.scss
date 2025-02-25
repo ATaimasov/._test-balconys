@@ -1,8 +1,9 @@
 @use "./global" as *;
 @use "base/root" as *;
 
-// components for all pages
-@use "components/UI/copyrights";
-
 // styles for scripts and animations
 @use "base/state";
+
+.wrapper-1170 {
+  max-width: 1170px;
+}
