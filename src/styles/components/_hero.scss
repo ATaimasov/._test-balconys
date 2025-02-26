@@ -27,7 +27,7 @@
 }
 
 .hero__container {
-  row-gap: 20px;
+  row-gap: 30px;
 
   @media screen and (min-width: $screen-md) {
     row-gap: 35px;
@@ -64,4 +64,3 @@
     }
   }
 }
-

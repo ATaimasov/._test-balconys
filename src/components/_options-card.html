@@ -1,4 +1,4 @@
-<li class="options-card card" >
+<li class="options-card card">
   <div class="options-card__img-container">
     <picture class="options-card__img img">
       @@if (wide === false) {
@@ -35,12 +35,19 @@
   <div class="options-card__content">
     <h2 class="options-card__title">@@title</h2>
     <p class="options-card__text">@@text</p>
-    <a class="options-card__btn btn card__link" href="@@link" aria-label="Заказать @@title" tabindex="0">Заказать</a>
+    <a
+      class="options-card__btn btn card__link"
+      href="@@link"
+      aria-label="Заказать @@title"
+      tabindex="0"
+      >Заказать</a
+    >
     <p class="options-card__price">
       Цена от
       <span class="no-wrap">
         <span class="options-card__price-value">@@price</span>
-        <span class="options-card__price-currency" aria-hidden="true">j</span>/м2
+        <span class="options-card__price-currency" aria-hidden="true">j</span
+        >/м2
       </span>
     </p>
   </div>

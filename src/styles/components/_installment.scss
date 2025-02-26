@@ -1,0 +1,139 @@
+@use "../global" as *;
+
+.installment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $color-primary;
+  min-height: 260px;
+  color: $color-text-secondary;
+}
+
+.installment__content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.installment__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  row-gap: 30px;
+  padding: 30px 10px;
+
+  @media screen and (min-width: $screen-md) {
+    padding: 30px 10px;
+  }
+  @media screen and (min-width: $screen-xl) {
+    flex-direction: row;
+    padding: 0 10px;
+  }
+}
+
+.installment__title {
+  padding-left: 0;
+  color: $color-text-secondary;
+  text-align: center;
+
+  @media screen and (min-width: $screen-xl) {
+    text-align: left;
+  }
+}
+
+.installment__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.installment__link {
+  padding: 25px 30px;
+  font-weight: 700;
+  border: 1px solid $color-text-secondary;
+  transition: opacity $animation-duration $animation;
+
+  &:is(:focus-visible, :hover) {
+    opacity: $opacity;
+  }
+
+  &:nth-child(1) {
+    background-color: $color-primary-2;
+    color: $color-text-secondary;
+  }
+  &:nth-child(2) {
+    background-color: $color-text-secondary;
+    color: $color-primary;
+  }
+}
+
+.installment__conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    gap: 65px;
+  }
+}
+
+.installment__condition {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (min-width: $screen-md) {
+    gap: 30px;
+  }
+  @media screen and (min-width: $screen-xl) {
+    gap: 60px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $screen-sm) {
+      padding-right: 35px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      padding-right: 65px;
+    }
+
+    &::after {
+      @media screen and (min-width: $screen-sm) {
+        content: "";
+        position: absolute;
+        top: 35%;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $color-text-secondary;
+        transform: translateY(-50%);
+      }
+
+      @media screen and (min-width: $screen-md) {
+        top: 30%;
+      }
+    }
+  }
+}
+
+.installment__condition-nums {
+  font-family: "Museo Cyrl", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+
+  & sub {
+    font-size: 50px;
+    margin-left: 5px;
+  }
+}

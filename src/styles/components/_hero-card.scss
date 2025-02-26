@@ -60,7 +60,9 @@
 
 .hero-card__btn {
   position: relative;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 130px;
   height: 50px;
   font-family: "Open Sans", sans-serif;
@@ -82,8 +84,8 @@
     visibility: hidden;
     transform: translateY(10px) translateX(30%);
     transition:
-    transform $animation-duration $animation,
-    opacity $animation-duration $animation,
-    visibility $animation-duration $animation;
+      transform $animation-duration $animation,
+      opacity $animation-duration $animation,
+      visibility $animation-duration $animation;
   }
 }

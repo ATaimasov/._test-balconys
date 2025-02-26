@@ -127,7 +127,6 @@
   &:hover:hover {
     opacity: $opacity;
   }
-
 }
 
 .options-card__price {
@@ -157,12 +156,13 @@
   color: $color-text-secondary;
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .options-card__text,
 .options-card__price,
 .options-card__btn {
-  transition: opacity $animation-duration $animation,
-  visibility $animation-duration $animation;
+  transition:
+    opacity $animation-duration $animation,
+    visibility $animation-duration $animation;
 }

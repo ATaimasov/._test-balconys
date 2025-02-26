@@ -1,0 +1,39 @@
+<li class="price-card card">
+  <div class="price-card__content">
+    <h2 class="price-card__title">Отделка "@@title"</h2>
+    <p class="price-card__text">@@text</p>
+    <p class="price-card__price">
+      <span>
+        <span class="text--bold">Стоимость:</span>
+        <span class="no-wrap">
+          <span class="text--hightlighted text--bold">@@price руб. кв.м.*</span>
+        </span>
+      </span>
+      <span>*Цена за материалы и работы</span>
+    </p>
+    <a
+      class="price-card__btn btn card__link"
+      href="@@link"
+      aria-label="Заказать @@title"
+      tabindex="0"
+      >Заказать</a
+    >
+  </div>
+  <div class="price-card__img-container">
+    <picture class="price-card__img img">
+      <source
+        srcset="./img/price-@@img.png"
+        media="(min-width: 1170px)"
+        width="690"
+        height="430"
+      />
+      <img
+        src="./img/price-@@img.png"
+        alt="@@title"
+        class="price-card__img img"
+        width="690"
+        height="430"
+      />
+    </picture>
+  </div>
+</li>

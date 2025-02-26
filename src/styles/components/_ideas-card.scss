@@ -7,8 +7,8 @@
       visibility: visible;
     }
 
-    .ideas-card__img  {
-      opacity: .5;
+    .ideas-card__img {
+      opacity: 0.5;
     }
   }
 }
@@ -48,8 +48,9 @@
   border-radius: 3px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity $animation-duration $animation,
-  visibility $animation-duration $animation;
+  transition:
+    opacity $animation-duration $animation,
+    visibility $animation-duration $animation;
 
   &:hover:hover {
     &::before {
@@ -57,9 +58,8 @@
     }
   }
 
-
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
