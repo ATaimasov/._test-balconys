@@ -60,36 +60,6 @@
 }
 //
 
-.header,
-.footer {
-  display: flex;
-
-  // change by your need
-  padding: rem(20px);
-  @media screen and (min-width: $screen-md) {
-    padding: rem(30px);
-  }
-  @media screen and (min-width: $screen-xl) {
-    padding: rem(40px);
-  }
-}
-
-.footer {
-  justify-content: center;
-
-  &__text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: rem(5px);
-  }
-
-  &__text {
-    font-size: rem(13px);
-    line-height: 1.3em;
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -104,8 +74,13 @@
 
     // change it by your needs
     // max-width: 80%;
-    row-gap: rem(50px);
-    padding: rem(30px);
+    // row-gap: rem(80px);
+    width: 100%;
+    padding: rem(30px) 0;
+
+    @media screen and (min-width: $screen-xl) {
+      padding: rem(60px) 0;
+    }
   }
 }
 

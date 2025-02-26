@@ -15,28 +15,41 @@
   &:nth-child(5) {
     $card-width: rem(582px);
     $card-height: rem(300px);
-
-    padding-top: rem(60px);
-    padding-bottom: rem(50px);
+    padding-top: rem(15px);
+    padding-bottom: rem(12.5px);
     padding-right: rem(10px);
-    height: $card-height * 0.6;
+    height: $card-height * 0.7;
+    width: 100%;
+
+    @media screen and (min-width: $screen-sm) {
+      width: $card-width;
+      height: $card-height * 0.6;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      padding-top: rem(30px);
+      padding-bottom: rem(25px);
+      padding-right: rem(100px);
+      height: $card-height * 0.8;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      padding-top: rem(60px);
+      padding-bottom: rem(50px);
+      width: $card-width;
+      height: $card-height;
+    }
 
     & .options-card__btn {
       padding: rem(10px) rem(20px);
     }
 
     & .options-card__text {
-      padding-top: rem(20px);
-    }
+      padding-top: rem(5px);
 
-    @media screen and (min-width: $screen-md) {
-      padding-right: rem(100px);
-      height: $card-height * 0.8;
-    }
-
-    @media screen and (min-width: $screen-xl) {
-      width: $card-width;
-      height: $card-height;
+      @media screen and (min-width: $screen-md) {
+        padding-top: rem(20px);
+      }
     }
   }
 

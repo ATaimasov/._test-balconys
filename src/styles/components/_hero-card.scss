@@ -9,6 +9,7 @@
   min-height: rem(470px);
   max-width: rem(370px);
   text-decoration: none;
+  background-color: $color-card-primary;
   transition: box-shadow $animation-duration $animation;
 
   @media screen and (min-width: $screen-md) {

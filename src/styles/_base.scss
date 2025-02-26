@@ -7,3 +7,36 @@
 .wrapper-1170 {
   max-width: 1170px;
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: rem(40px);
+
+  @media screen and (min-width: $screen-md) {
+    padding-bottom: rem(60px);
+  }
+  @media screen and (min-width: $screen-xl) {
+    padding-bottom: rem(80px);
+  }
+}
+
+.section__title {
+  padding: 0 rem(10px);
+  font-family: "Museo Cyrl", sans-serif;
+  font-size: rem(38px);
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+  color: $color-text-primary;
+}
+
+.section__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: rem(16px);
+  line-height: 1.3em;
+  color: $color-text-primary;
+}

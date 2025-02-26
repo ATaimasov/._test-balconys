@@ -3,34 +3,35 @@
 @use "./form";
 
 .options {
+  position: relative;
+  // padding-top: rem(420px);
+  padding-bottom: rem(70px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.options__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: rem(45px);
+  row-gap: rem(45px);
   }
-}
-
-.options__title {
-  font-family: "Museo Cyrl", sans-serif;
-  font-size: rem(38px);
-  font-weight: 700;
-  line-height: 1em;
-  color: $color-text-primary;
-}
 
 .options__text {
   padding: 0 rem(35px);
-  font-family: "Open Sans", sans-serif;
-  font-size: rem(16px);
-  line-height: 1.3em;
-  color: $color-text-primary;
 }
 
 .options__cards {
