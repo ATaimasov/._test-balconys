@@ -4,3 +4,42 @@
 .ideas {
   padding-top: rem(80px);
 }
+
+.ideas__container {
+  row-gap: rem(20px);
+
+  @media screen and (min-width: $screen-md) {
+    row-gap: rem(35px);
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    row-gap: rem(70px);
+  }
+}
+
+.ideas__cards {
+  display: grid;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(20px);
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(25px);
+
+    & *:last-child:nth-child(odd) {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30px);
+
+    & *:last-child:nth-child(odd) {
+      grid-column: auto;
+    }
+  }
+}

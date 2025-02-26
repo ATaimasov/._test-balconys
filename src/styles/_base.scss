@@ -24,6 +24,13 @@
   }
 }
 
+.section__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .section__title {
   padding: 0 rem(10px);
   font-family: "Museo Cyrl", sans-serif;
@@ -39,4 +46,13 @@
   font-size: rem(16px);
   line-height: 1.3em;
   color: $color-text-primary;
+}
+
+.card {
+
+}
+
+.card__link {
+  color: inherit;
+  text-decoration: none;
 }

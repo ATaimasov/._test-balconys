@@ -9,7 +9,6 @@
   width: rem(386px);
   height: rem(450px);
   color: $color-text-secondary;
-  text-decoration: none;
 
   &:nth-child(4),
   &:nth-child(5) {
@@ -53,7 +52,7 @@
     }
   }
 
-  &:hover {
+  &:is(:hover, :focus-within) {
     .options-card__btn {
       opacity: 1;
     }

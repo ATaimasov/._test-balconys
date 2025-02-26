@@ -1,17 +1,25 @@
-<a class="hero-card" href="@@link">
-  <div class="hero-card__img-container">
-    <picture>
-      <source
-        srcset="./img/hero-@@img.png"
-        media="(min-width: 1170px)"
-        width="369"
-        height="340"
-      />
-      <img src="./img/hero-@@img.png" alt="@@title" class="hero-card__img img" />
-    </picture>
-  </div>
-  <div class="hero-card__content">
-    <h2 class="hero-card__title">@@title</h2>
-    <p class="hero-card__btn" data-hover-text="Подробнее">Заказать</p>
-  </div>
-</a>
+<li class="hero-card card">
+  <a class="card__link hero-card__link" href="@@link" aria-label="Заказать @@title" tabindex="0">
+    <div class="hero-card__img-container">
+      <picture>
+        <source
+          srcset="./img/hero-@@img.png"
+          media="(min-width: 1170px)"
+          width="369"
+          height="340"
+        />
+        <img
+          src="./img/hero-@@img.png"
+          alt="@@title"
+          class="hero-card__img img"
+          width="369"
+          height="340"
+        />
+      </picture>
+    </div>
+    <div class="hero-card__content">
+      <h2 class="hero-card__title">@@title</h2>
+      <span class="hero-card__btn" data-hover-text="Подробнее" role="button">Заказать</span>
+    </div>
+  </a>
+</li>

@@ -1,22 +1,9 @@
 @use "../global" as *;
 
 .hero-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-  height: 100%;
-  min-height: rem(470px);
-  max-width: rem(370px);
-  text-decoration: none;
-  background-color: $color-card-primary;
   transition: box-shadow $animation-duration $animation;
 
-  @media screen and (min-width: $screen-md) {
-    min-height: rem(570px);
-  }
-
-  &:hover {
+  &:is(:hover, :focus-within) {
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
 
     & .hero-card__btn {
@@ -31,6 +18,21 @@
   }
 
 
+}
+
+.hero-card__link {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  height: 100%;
+  min-height: rem(470px);
+  max-width: rem(370px);
+  background-color: $color-card-primary;
+
+  @media screen and (min-width: $screen-md) {
+    min-height: rem(570px);
+  }
 }
 
 .hero-card__content {
