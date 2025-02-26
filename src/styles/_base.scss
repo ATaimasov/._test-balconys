@@ -14,13 +14,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: rem(40px);
+  padding-bottom: 40px;
 
   @media screen and (min-width: $screen-md) {
-    padding-bottom: rem(60px);
+    padding-bottom: 60px;
   }
   @media screen and (min-width: $screen-xl) {
-    padding-bottom: rem(80px);
+    padding-bottom: 80px;
   }
 }
 
@@ -32,24 +32,26 @@
 }
 
 .section__title {
-  padding: 0 rem(10px);
+  padding: 0 10px;
   font-family: "Museo Cyrl", sans-serif;
-  font-size: rem(38px);
+  font-size: 38px;
   line-height: 1em;
   font-weight: 700;
   text-align: center;
   color: $color-text-primary;
+
+  &--hightlighted {
+    color: $color-primary;
+  }
 }
+
+
 
 .section__text {
   font-family: "Open Sans", sans-serif;
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.3em;
   color: $color-text-primary;
-}
-
-.card {
-
 }
 
 .card__link {

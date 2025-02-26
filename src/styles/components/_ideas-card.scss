@@ -1,0 +1,81 @@
+@use "../global" as *;
+
+.ideas-card {
+  &:is(:hover, :focus-within) {
+    .ideas-card__btn {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .ideas-card__img  {
+      opacity: .5;
+    }
+  }
+}
+
+.ideas-card__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.ideas-card__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  height: 70px;
+  font-size: 20px;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+  background-color: $color-tertiary;
+}
+
+.ideas-card__btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 20px 30px;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+  background-color: $color-secondary;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $animation-duration $animation,
+  visibility $animation-duration $animation;
+
+  &:hover:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity $animation-duration $animation;
+    border-radius: 3px;
+  }
+}
+
+.ideas-card__img {
+  transition: opacity $animation $animation-duration;
+}
+
+.ideas-card__img-container {
+  margin: 0 auto;
+}

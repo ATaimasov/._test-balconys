@@ -1,15 +1,45 @@
-<form action="#" class="options-card form">
+<form action="#" method="post" class="options-card form">
   <div class="form__container">
     <h4 class="form__title">Получите консультацию прямо сейчас!</h4>
     <div class="form__inputs">
-      <input class="form__input form__input-name" type="text" placeholder="Имя" required/>
-      <input class="form__input form__input-phone" type="text" placeholder="Телефон" required/>
-      <input class="form__input form__input-email" type="text" placeholder="Email" required/>
-      <input class="form__input form__input-product" type="text" placeholder="Интересующая услуга/продукт" required/>
-      <textarea class="form__input form__textarea" placeholder="Комментарий"></textarea>
+      <input
+        class="form__input form__input-name"
+        type="text"
+        placeholder="Имя"
+        name="name"
+        required
+      />
+      <input
+        class="form__input form__input-phone"
+        type="text"
+        placeholder="Телефон"
+        name="phone"
+        required
+      />
+      <input
+        class="form__input form__input-email"
+        type="text"
+        placeholder="Email"
+        name="email"
+        required
+      />
+      <input
+        class="form__input form__input-product"
+        type="text"
+        placeholder="Интересующая услуга/продукт"
+        name="product"
+        required
+      />
+      <textarea
+        class="form__input form__textarea"
+        placeholder="Комментарий"
+        name="comment"
+      ></textarea>
     </div>
     <div class="form__submit">
-      <p class="form__policy">Отправляя заявку я соглашаюсь с политикой конфиденциальности</p>
+      <p class="form__policy">
+        Отправляя заявку я соглашаюсь с политикой конфиденциальности
+      </p>
       <button class="btn form__btn" type="submit">Отправить</button>
     </div>
   </div>

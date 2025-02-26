@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+.params-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  margin-top: 155px;
+  padding-top: 155px;
+  padding-bottom: 50px;
+  min-height: 480px;
+  width: 370px;
+  background-color: $color-card-primary;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.params-card__img-container {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 310px;
+  height: 310px;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.params-card__title {
+  padding-top: 30px;
+  font-family: "Museo Cyrl", sans-serif;
+  font-size: 25px;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.params-card__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 0 30px;
+  font-size: 14px;
+}
+
+.params-card__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  &:not(:last-child) {
+    border-bottom: 1px dashed $color-tertiary;
+  }
+}
+
+.params-card__service {
+  padding-right: 30px;
+}
+
+.params-card__price {
+  font-weight: 700;
+  color: $color-secondary;
+
+  &::before {
+    content: "от ";
+  }
+
+  &::after {
+    content: " ₽";
+  }
+}
