@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
+  row-gap: 15px;
   margin-top: 155px;
   padding-top: 155px;
   padding-bottom: 50px;
@@ -25,10 +25,10 @@
 }
 
 .params-card__title {
-  padding-top: 30px;
+  padding-top: 10px;
   font-family: "Museo Cyrl", sans-serif;
   font-size: 25px;
-  line-height: 1em;
+  line-height: 2.4em;
   font-weight: 700;
   text-align: center;
 }

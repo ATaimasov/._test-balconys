@@ -58,6 +58,10 @@
   color: $color-text-primary;
 }
 
+.hero-card__title {
+  line-height: 1em;
+}
+
 .hero-card__btn {
   position: relative;
   display: flex;

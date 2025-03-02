@@ -22,7 +22,7 @@
 }
 
 .options__container {
-  row-gap: 45px;
+  row-gap: 25px;
 }
 
 .options__text {
@@ -37,6 +37,7 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: 15px;
   width: 100%;
+  padding-top: 25px;
 
   @media screen and (min-width: $screen-md) {
     grid-template-columns: repeat(2, 1fr);

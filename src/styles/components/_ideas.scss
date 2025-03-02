@@ -2,7 +2,8 @@
 @use "./ideas-card";
 
 .ideas {
-  padding-top: 80px;
+  padding-top: 65px;
+  padding-bottom: 90px;
 }
 
 .ideas__container {
@@ -13,7 +14,7 @@
   }
 
   @media screen and (min-width: $screen-xl) {
-    row-gap: 70px;
+    row-gap: 45px;
   }
 }
 
