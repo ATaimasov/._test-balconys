@@ -35,11 +35,18 @@
 
 .section__title {
   font-family: "Museo Cyrl", sans-serif;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 1.58em;
   font-weight: 700;
   text-align: center;
   color: $color-text-primary;
+
+  @media screen and (min-width: $screen-md) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: $screen-xl) {
+    font-size: 38px;
+  }
 }
 
 .section__text {

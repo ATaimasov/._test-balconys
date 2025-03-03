@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 
   @media screen and (min-width: $screen-xxl) {
     flex-direction: row;
@@ -58,4 +59,88 @@
   row-gap: 5px;
   margin-bottom: 20px;
   line-height: 1.25em;
+}
+
+.price-card__categories {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+  padding-bottom: 25px;
+  min-height: 430px;
+  width: 100%;
+  color: $color-card-primary;
+  background-color: $color-price-bg;
+
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 35px;
+    padding-bottom: 30px;
+    padding-left: 55px;
+    padding-right: 35px;
+    height: 430px;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: 690px;
+
+  }
+}
+
+.price-card__category {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-rows: auto 1fr;
+  gap: 15px;
+}
+
+.price-card__category-container {
+  width: 100%;
+
+  @media screen and (min-width: $screen-lg) {
+    &:nth-child(odd) {
+      min-width: 294px;
+    }
+
+    &:nth-child(even) {
+      min-width: 270px;
+    }
+  }
+}
+
+.price-card__img-heel {
+  transform: translateY(-10px);
+}
+
+.price-card__category-img-container {
+  display: flex;
+  align-items: flex-end;
+  min-height: 136px;
+}
+
+.price-card__category-content {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.price-card__category-title {
+  &::after {
+    content: "-";
+    margin: 0 5px;
+  }
+}
+
+.price-card__category-price {
+  font-weight: 700;
+  &::after {
+    content: "j";
+    font-family: "ALSRubl", sans-serif;
+    font-weight: 400;
+    margin-left: 5px;
+  }
 }

@@ -54,7 +54,8 @@
     }
   }
 
-  @media screen and (min-width: $screen-xl) {
+
+  @media screen and (min-width: $screen-lg) {
     grid-template-columns: repeat(6, 1fr);
     gap: 5px;
 

@@ -9,19 +9,26 @@
   padding-top: 155px;
   padding-bottom: 50px;
   min-height: 480px;
-  width: 370px;
   background-color: $color-card-primary;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: $screen-sm) {
+    width: 370px;
+  }
 }
 
 .params-card__img-container {
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 23px;
   width: 310px;
   height: 310px;
   user-select: none;
   transform: translateY(-50%);
+
+  @media screen and (min-width: $screen-sm) {
+    left: 30px;
+  }
 }
 
 .params-card__title {

@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 .ideas-card {
+  max-height: 313px;
   &:is(:hover, :focus-within) {
     .ideas-card__btn {
       opacity: 1;
@@ -73,6 +74,7 @@
 }
 
 .ideas-card__img {
+  width: 100%;
   transition: opacity $animation $animation-duration;
 }
 
